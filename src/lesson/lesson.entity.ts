@@ -12,6 +12,8 @@ export class Lesson {
   name: string;
 
   @Column()
-  V;
+  startDate: string;
+
+  @Column()
   endDate: string;
 }
