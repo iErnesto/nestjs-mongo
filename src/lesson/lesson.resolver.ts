@@ -17,4 +17,9 @@ export class LessonResolver {
   ) {
     return this.lessonService.createLesson(createLessonInput);
   }
+
+  @Query((returns) => [LessonType])
+  getLessons() {
+    return this.lessonService.getLessons();
+  }
 }
