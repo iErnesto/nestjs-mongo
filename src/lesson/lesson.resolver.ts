@@ -36,7 +36,7 @@ export class LessonResolver {
     return this.lessonService.getLessons();
   }
 
-  @Mutation((returns) => [LessonType])
+  @Mutation((returns) => LessonType)
   assignStudentsToLesson(
     @Args('assignStudentsToLessonInput')
     assignStudentsToLesson: AssignStudentsToLessonInput,
