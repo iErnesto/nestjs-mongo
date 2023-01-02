@@ -31,4 +31,15 @@ export class StudentService {
   async getStudent(id: string): Promise<Student> {
     return this.studentRepository.findOneBy({ id });
   }
+
+  async getManyStudents(studentIds: string[]): Promise<Student[]> {
+    return this.studentRepository.find({
+      where: {
+        id: {
+          // @ts-ignore
+          $in: studentIds,
+        },
+      },
+    });
+  }
 }
